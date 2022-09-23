@@ -36,9 +36,14 @@ orderForm.submit(event => {
  */
 function getOrderData() {
     let ingredients = [];
+    let beverages = [];
     $.each($("input[name='ingredients']:checked"), function (el) {
         ingredients.push($(this).val());
     });
+    $.each($("input[name='beverages']:checked"), function (el) {
+        beverages.push($(this).val());
+    });
+
 
     return {
         client_name: $("input[name='name']").val(),
@@ -46,8 +51,10 @@ function getOrderData() {
         client_address: $("input[name='address']").val(),
         client_phone: $("input[name='phone']").val(),
         size_id: $("input[name='size']:checked").val(),
-        ingredients
+        ingredients,
+        beverages
     };
+
 }
 
 /**
@@ -109,6 +116,7 @@ function createSizeTemplate(size) {
 
 function loadInformation() {
     fetchIngredients();
+    fetchBeverage();
     fetchOrderSizes();
 }
 
