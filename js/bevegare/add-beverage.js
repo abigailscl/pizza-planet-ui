@@ -41,7 +41,7 @@ function getBeverageData() {
  * Shows a notification when the order is accepted
  */
 function showNotification() {
-    let beveragetAlert = $("#beverage-alert");
-    beveragetAlert.toggle();
-    setTimeout(() => beveragetAlert.toggle(), 5000);
+    let beverageAlert = $("#beverage-alert");
+    beverageAlert.toggle();
+    setTimeout(() => beverageAlert.toggle(), 5000);
 }
