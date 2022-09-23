@@ -1,5 +1,5 @@
 .jumbotron {
-  padding: 1em 1em;
+  padding: 1em 1em 1em;
 }
 
 #order-alert {
@@ -10,10 +10,22 @@
   display: none;
 }
 
+#beverage-alert {
+  display: none;
+}
+
 #size-alert {
   display: none;
 }
 
 .order {
   display: none;
+}
+
+.w-50 {
+  width: 33.3% !important;
+}
+
+.table-bordered td, .table-bordered th {
+  text-align-last: center;
 }
