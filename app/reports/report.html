@@ -14,7 +14,7 @@
     />
     <link rel="stylesheet" href="/css/styles.css" />
 
-    <title>L'ultima Cena Pizzeria! - Orders</title>
+    <title>L'ultima Cena Pizzeria! - Reports</title>
   </head>
 
   <body>
@@ -52,43 +52,48 @@
       </nav>
     </header>
 
-    <!-- TABLE -->
+    <!-- Order Detail -->
 
     <div class="container">
       <div class="jumbotron">
-        <div id="order-list">
-          <h2 class="text-center">Orders</h2>
-          <table id="orders" class="table bg-white table-bordered table-hover">
-            <thead class="thead-dark">
-              <tr class="d-flex">
-                <th class="col-3">Name</th>
-                <th class="col-2">DNI</th>
-                <th class="col-3">Address</th>
-                <th class="col-2 text-right">Total Sale</th>
-                <th class="col-2 text-center">Actions</th>
-              </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
-        </div>
+        <div id="order"></div>
       </div>
     </div>
 
-    <template id="order-item-template">
-      <tr class="d-flex">
-        <td class="col-3">{{client_name}}</td>
-        <td class="col-2">{{client_dni}}</td>
-        <td class="col-3">{{client_address}}</td>
-        <td class="col-2 text-right">${{total_price}}</td>
-        <td class="col-2">
-          <div class="text-center">
-            <a class="btn btn-success btn-sm view-order" href="/app/order/order-detail.html?_id={{_id}}">View</a>
-          </div>
-        </td>
-      </tr>
-    </template>
+    <template id="order-template">
+      <h2 id="title" class="text-center">Reports</h2>
+      <br />
 
-    <!-- Optional JavaScript -->
+         <!-- TABLE -->
+
+    <div class="container">
+        <div class="jumbotron">
+          <div id="order-list">
+            <h2 class="text-center">Orders</h2>
+            <table id="orders" class="table bg-white table-bordered table-hover">
+              <thead class="thead-dark">
+                <tr class="d-flex">
+                  <th class="col-3">Best Customer</th>
+                  <th class="col-2">Best Ingredient</th>
+                  <th class="col-3">Best Month</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+  
+      <template id="order-item-template">
+        <tr class="d-flex">
+          <td class="col-3">Liza Pizza</td>
+          <td class="col-2">Cheese</td>
+          <td class="col-3">Febrary: 336.68</td>
+          <td class="col-2">
+          </td>
+        </tr>
+      </template>
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
